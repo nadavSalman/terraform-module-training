@@ -1,1 +1,6 @@
-# This is the root module
+
+resource "kubernetes_namespace" "test" {
+  metadata {
+    name = "paz"
+  }
+}
