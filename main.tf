@@ -1,6 +1,6 @@
 
 resource "kubernetes_namespace" "test" {
   metadata {
-    name = "paz"
+    name = var.paz_namespace
   }
 }
