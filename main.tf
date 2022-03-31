@@ -1,6 +1,7 @@
-
-resource "kubernetes_namespace" "test" {
-  metadata {
-    name = var.paz_namespace
+module "aks-kubernetes" {
+  providers = {
+    kubernetes = kubernetes.aks
   }
+  source               = "./modules/kubernetes"
+  namespaces_to_create = local.kubernetes_namespaces
 }
