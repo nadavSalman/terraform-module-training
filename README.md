@@ -1,5 +1,13 @@
+# Terraform Hands On
+
+This tutorial demonstrate the use of terraform emphasis on: 
+- Using providers 
+- damage values (terraform data structures) 
+- logic with control flow & loop 
+- module : root & child
 
 
+![ScreenShot](screenshots/project-architecture.png)
 
 # Terrafrom workflow
 
@@ -13,19 +21,23 @@ terraform console
 terraform fmt
 ```
 
+## Types of Named Values
+The main kinds of named values available in Terraform are:
 
-# Save information inside terrafrom 
-- variables 
-    - ```
-        var.* # 1.Declare 2. Init -> in-run-time / default
-- locals 
-- data
+- Resources
+- Input variables
+- ocal values
+- Child module outputs
+- Data sources
+- Filesystem and workspace info
+- Block-local values
 
 
 
 
 
 
+## Constract new data with expressions : 
 ```
 > var.namespaces_to_create
 tolist([
@@ -61,7 +73,7 @@ tolist([
 ```
 
 
-## vThe Root Module
+## The Root Module
 Every Terraform configuration has at least one module, known as its root module, which consists of the resources defined in the .tf files in the main working directory.
 
 ## Child Modules
